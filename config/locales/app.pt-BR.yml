@@ -1,0 +1,19 @@
+# encoding: UTF-8
+---
+pt-BR:
+  cancel: Cancelar
+
+  users:
+    index:
+      title: Listar Usuários
+    new:
+      title: Criar Usuário
+
+  activerecord:
+    models:
+      user: Usuário
+    attributes:
+      user:
+        first_name: Primeiro nome
+        last_name: Último nome
+        password: Senha
