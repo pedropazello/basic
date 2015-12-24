@@ -20,3 +20,5 @@
 
 # Configurations database
 /config/database.yml
+/db/schema.rb
+
