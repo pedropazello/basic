@@ -14,4 +14,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require kendo.all.min
 //= require_tree .
