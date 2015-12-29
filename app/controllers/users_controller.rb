@@ -4,7 +4,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    order = 'id'
+    if params.key?(:sort)
+      orders = []
+      params[:sort].each { |sort| orders << "#{sort[1][:field]} #{sort[1][:dir]}" }
+      order = orders.join(', ')
+    end
+
+    @users = User.order(order).page(params[:page]).per(params[:take])
   end
 
   # GET /users/1

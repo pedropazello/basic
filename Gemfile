@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 # fonts
 gem 'google-webfonts-rails'
 
+# pagination
+gem 'kaminari'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
