@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Basic</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= google_webfonts_init({google: ['Open Sans']}) %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="wrap">
-    <%= render 'layouts/navigation' %>
-    <div class="container">
-      <%= yield %>
+  <head>
+    <title>Basic</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= google_webfonts_init({google: ['Open Sans']}) %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    
+    <div class="wrap">
+      <%= render 'layouts/navigation' %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
-  </div>
-</body>
+    
+    <% if current_user %> 
+      <ul> 
+        <li><%= current_user.email %></li> 
+        <li><%= link_to "Logout", logout_path, method: "delete" %></li> 
+      </ul> 
+    <% else %> 
+      <ul> 
+        <li><%= link_to "Login", login_path %></a></li> 
+        <li><%= link_to "Signup", new_user_path %></a></li> 
+      </ul> 
+    <% end %>
+    
+  </body>
 </html>
