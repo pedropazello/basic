@@ -12,21 +12,12 @@
     <div class="wrap">
       <%= render 'layouts/navigation' %>
       <div class="container">
+        <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+        <% end -%>
+
         <%= yield %>
       </div>
     </div>
-    
-    <% if current_user %> 
-      <ul> 
-        <li><%= current_user.email %></li> 
-        <li><%= link_to "Logout", logout_path, method: "delete" %></li> 
-      </ul> 
-    <% else %> 
-      <ul> 
-        <li><%= link_to "Login", login_path %></a></li> 
-        <li><%= link_to "Signup", new_user_path %></a></li> 
-      </ul> 
-    <% end %>
-    
   </body>
 </html>
