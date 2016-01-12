@@ -19,4 +19,11 @@ pt-BR:
         password: Senha
     errors:
       messages:
-        invalid_format: formato inválido
+        invalid_format: Formato inválido.
+        blank: Não pode ficar em branco.
+  
+  flash:
+    sucess:
+      valid_login: Login efetuado com sucesso!
+    danger:
+      invalid_login: Email ou senha inválidos.

@@ -10,11 +10,11 @@ class SessionsController < ApplicationController
     respond_to do |format|
       if @user && @user.authenticate(params[:session][:password])
         session[:user_id] = @user.id
+        flash[:success] = t('flash.sucess.valid_login')
         format.html { redirect_to '/' }
       else
-        flash[:danger] = "Invalid login or password."
+        flash[:danger] = t('flash.danger.invalid_login')
         format.html { render :new }
-        #redirect_to '/login'
       end
     end
   end
