@@ -8,6 +8,8 @@ pt-BR:
       title: Listar Usuários
     new:
       title: Criar Usuário
+    update:
+      title: Editar Usuário
 
   activerecord:
     models:
