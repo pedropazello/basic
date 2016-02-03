@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.order(set_order(params)).page(params[:page]).per(params[:take])
+    where = 'first_name iLIKE :value OR last_name iLIKE :value OR email iLIKE :value', {:value => "%#{params[:search][:value]}%"} if params.key?(:search)
+    @users = User.where(where).order(set_order(params)).page(params[:start]).per(params[:length])
   end
 
   # GET /users/1

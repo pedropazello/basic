@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   def set_order(params)
     order = 'id'
-    if params.key?(:sort)
+    if params.key?(:order)
       orders = []
-      params[:sort].each { |sort| orders << "#{sort[1][:field]} #{sort[1][:dir]}" }
+      params[:order].each { |sort| orders << "#{params[:columns][sort[1][:column]][:data]} #{sort[1][:dir]}" }
       order = orders.join(', ')
     end
     order
