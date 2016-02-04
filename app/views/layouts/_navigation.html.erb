@@ -13,7 +13,7 @@
     <div id="w0-collapse" class="navbar-collapse collapse" aria-expanded="false">
       <ul id="w1" class="navbar-nav navbar-right nav">
         <% if current_user %>
-          <li><%= link_to t('menu.users'), users_path %></li>
+          <li class="<%=  'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><%= link_to t('menu.users'), users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= current_user.first_name %> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -21,8 +21,6 @@
               <li><%= link_to t('logout'), logout_path, method: "delete" %></li>
             </ul>
           </li>
-        <% else %>
-          <li><%= link_to t('login'), login_path %></li>
         <% end %>
       </ul>
     </div>
