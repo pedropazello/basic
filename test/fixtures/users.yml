@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: Jean
+  last_name: MyString
+  email: jeanpeixotodias@gmail.com
+  password_digest: MyString
+
+two:
+  first_name: Marinete
+  last_name: MyString
+  email: mana4js@hotmail.com
+  password_digest: MyString

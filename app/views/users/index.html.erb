@@ -21,14 +21,19 @@
 <script type="text/javascript">
   $(document).ready(function () {
     $('#grid').DataTable({
-      'processing': true,
-      'serverSide': true,
-      'ajax': '/users.json',
-      'columns': [
-        {'data': 'first_name'},
-        {'data': 'last_name'},
-        {'data': 'email'}
+      processing: true,
+      serverSide: true,
+      ajax: '/users.json',
+      columns: [
+        {data: 'first_name'},
+        {data: 'last_name'},
+        {data: 'email'}
       ]
     });
+
+    $('#grid_wrapper').addClass('form-inline');
+    $('input[type="search"]').addClass('form-control');
+    $('[name="grid_length"]').addClass('form-control');
   });
+
 </script>
