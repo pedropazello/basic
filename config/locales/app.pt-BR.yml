@@ -2,13 +2,20 @@
 ---
 pt-BR:
   cancel: Cancelar
+  login: Entrar
+  logout: Sair
+  password: Senha
+
+  menu:
+    users: Usuários
+    edit: Editar usuário
 
   users:
     index:
       title: Listar Usuários
     new:
       title: Criar Usuário
-    update:
+    edit:
       title: Editar Usuário
 
   activerecord:
