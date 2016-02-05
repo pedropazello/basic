@@ -20,16 +20,14 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    $('#grid').DataTable({
-      processing: true,
-      serverSide: true,
-      ajax: '/users.json',
-      columns: [
-        {data: 'first_name'},
-        {data: 'last_name'},
-        {data: 'email'}
-      ]
-    });
+    configDataTables['ajax'] = '/users.json';
+    configDataTables['columns'] = [
+      {data: 'first_name'},
+      {data: 'last_name'},
+      {data: 'email'}
+    ];
+
+    $('#grid').DataTable(configDataTables);
 
     $('#grid_wrapper').addClass('form-inline');
     $('input[type="search"]').addClass('form-control');
