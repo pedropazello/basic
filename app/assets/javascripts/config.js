@@ -9,10 +9,10 @@ var configDataTables = {
     'sSearch':        "Buscar:",
     'oPaginate': {
       'sFirst':     "Primeiro",
-      //'sPrevious':  "Anterior",
-      'sPrevious':  '<span class="glyphicon glyphicon-chevron-left"></span>',
-      //'sNext':      "Seguinte",
-      'sNext':      '<span class="glyphicon glyphicon-chevron-right"></span>',
+      'sPrevious':  "Anterior",
+      //'sPrevious':  '<span class="glyphicon glyphicon-chevron-left"></span>',
+      'sNext':      "Seguinte",
+      //'sNext':      '<span class="glyphicon glyphicon-chevron-right"></span>',
       'sLast':      "Último"
     }
   },

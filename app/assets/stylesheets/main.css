@@ -1,12 +1,48 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/glyphicons-halflings-regular.eot');
+    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
 table.dataTable thead th, table.dataTable thead td {
     background-color: #ecf0f1;
     border-bottom: none !important;
 }
+
 table.dataTable.no-footer {
     border-color: #ecf0f1 !important;
 }
-/*
+
 table.dataTable thead .sorting, .sorting_asc, .sorting_desc {
     background-image: none !important;
 }
-*/
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    position: relative;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    opacity: 0.5;
+}
+table.dataTable thead .sorting:after {
+    opacity: 0.2;
+    content: "\e150"; /* sort */
+}
+table.dataTable thead .sorting_asc:after {
+    content: "\e151"; /* sort-by-attributes */
+}
+table.dataTable thead .sorting_desc:after {
+    content: "\e152"; /* sort-by-attributes-alt */
+}
