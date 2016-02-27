@@ -5,6 +5,7 @@ pt-BR:
   login: Entrar
   logout: Sair
   password: Senha
+  actions: Ações
 
   menu:
     users: Usuários

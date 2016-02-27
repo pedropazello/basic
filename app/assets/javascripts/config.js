@@ -7,12 +7,13 @@ var configDataTables = {
     'sInfoEmpty':     "Mostrando de 0 até 0 de 0 registros",
     'sInfoFiltered':  "(filtrado de _MAX_ registros no total)",
     'sSearch':        "Buscar:",
+    //'sSearch':       '<span class="glyphicon glyphicon-search"></span> ',
     'oPaginate': {
       'sFirst':     "Primeiro",
-      'sPrevious':  "Anterior",
-      //'sPrevious':  '<span class="glyphicon glyphicon-chevron-left"></span>',
-      'sNext':      "Seguinte",
-      //'sNext':      '<span class="glyphicon glyphicon-chevron-right"></span>',
+      //'sPrevious':  "Anterior",
+      'sPrevious':  '<span class="glyphicon glyphicon-chevron-left"></span>',
+      //'sNext':      "Seguinte",
+      'sNext':      '<span class="glyphicon glyphicon-chevron-right"></span>',
       'sLast':      "Último"
     }
   },
