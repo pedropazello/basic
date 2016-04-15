@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<h1><%= t '.title' %></h1>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-2">
+    <label><%= t('activerecord.attributes.user.first_name') %>:</label>
+  </div>
+  <div class="col-sm-9">
+    <%= @user.first_name %>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-2">
+    <label><%= t('activerecord.attributes.user.last_name') %>:</label>
+  </div>
+  <div class="col-sm-9">
+    <%= @user.last_name %>
+  </div>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-2">
+    <label><%= t('activerecord.attributes.user.email') %>:</label>
+  </div>
+  <div class="col-sm-9">
+    <%= @user.email %>
+  </div>
+</div>
