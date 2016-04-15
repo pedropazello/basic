@@ -18,6 +18,8 @@ pt-BR:
       title: Criar Usuário
     edit:
       title: Editar Usuário
+    show:
+      title: Perfil
 
   activerecord:
     models:
@@ -31,9 +33,12 @@ pt-BR:
       messages:
         invalid_format: Formato inválido.
         blank: Não pode ficar em branco.
-  
+
   flash:
     sucess:
       valid_login: Login efetuado com sucesso!
+      create_user: Usuário criado com sucesso!
+      update_user: Usuário editado com sucesso!
     danger:
       invalid_login: Email ou senha inválidos.
+      wrong_password: Senha incorreta.
