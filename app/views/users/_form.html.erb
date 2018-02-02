@@ -33,6 +33,14 @@
     </div>
   <% end %>
 
+  <div class="field form-group <% if @user.errors.has_key? :group_id %>has-error<% end %>">
+    <%= f.label :group_id, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%= f.collection_select :group_id, Group.order(:name), :id, :name, {}, {class: "form-control"} %>
+      <%= error_tag @user, :group_id %>
+    </div>
+  </div>
+
   <div class="actions form-group">
     <div class="col-sm-offset-2 col-sm-12">
       <%= f.submit nil, :class => 'btn btn-default' %>
